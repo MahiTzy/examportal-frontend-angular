@@ -1,0 +1,36 @@
+<div *ngIf="quizzes && quizzes.length; else noQuizzes">
+  <mat-card appearance="outlined" *ngFor="let c of quizzes" class="mb-1">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{c.title}}</mat-card-title>
+      <mat-card-subtitle>{{c.category.title}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p>{{c.description}}</p>
+      <button class="me-2" mat-flat-button color="accent" [routerLink]="'/admin-dashboard/questions/'+c.qid+'/'+c.title">Questions</button>
+      <button disabled class="me-2" mat-flat-button color="accent">Max Marks: {{c.maxMarks}}</button>
+      <button disabled class="me-2" mat-flat-button color="accent">Number of Questions: {{c.numberOfQuestions}}</button>
+      <button class="me-2" mat-flat-button color="accent" [routerLink]="'/admin-dashboard/attempts/'+c.qid+'/'+c.title">Attempts</button>
+    </mat-card-content>
+    <mat-card-actions align="end">
+      <button class="me-2" mat-mini-fab [routerLink]="'/admin-dashboard/update-quiz/'+c.qid">
+        <mat-icon>swap_vertical_circle</mat-icon>
+      </button>
+      <button mat-mini-fab color="warn" (click)="deleteQuiz(c.qid)">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
+<ng-template #noQuizzes>
+  <mat-card appearance="outlined" class="mb-1">
+    <mat-card-content>
+      <h1>No quizzes found.</h1>
+    </mat-card-content>
+  </mat-card>
+</ng-template>
+
+<div class="container text-center mt-2">
+  <a mat-raised-button color="primary" routerLink="/admin-dashboard/add-quiz">Add New Quiz</a>
+</div>

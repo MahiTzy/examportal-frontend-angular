@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  /* background-color: rgb(185, 192, 204)!important; */
+  background-image: url('https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjgyOGxieTB6MHl0dDNzZXJ3b2d6bmlveHcwNTRkYjdhdnkxdW1lMCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/BHNfhgU63qrks/giphy.gif');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}

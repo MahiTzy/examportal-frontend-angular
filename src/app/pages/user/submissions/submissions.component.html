@@ -1,0 +1,21 @@
+<!-- {{quizResult | json}} -->
+
+@for (qr of quizResultsWithDetails; track qr) {
+<mat-card class="mb-1">
+
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{qr.quizDetails.title}} <small>({{qr.quizDetails.description}})</small></mat-card-title>
+    <mat-card-subtitle>Submitted At: {{qr.submittedAt}}</mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-card-content>
+    <button class="me-2" mat-stroked-button color="primary">M.M. {{qr.quizDetails.maxMarks}}</button>
+    <button class="me-2" mat-stroked-button color="primary">Marks obtained: {{(qr.score*100)/qr.quizDetails.maxMarks}}%</button>
+    <button class="me-2" mat-stroked-button color="primary">Total questions: {{qr.quizDetails.numberOfQuestions}}</button>
+    <button class="me-2" mat-stroked-button color="primary">Questions attempted: {{qr.attempted}}</button>
+    <button class="me-2" mat-stroked-button color="primary">No. of correct answers: {{qr.correct}}</button>
+    <button class="me-2" mat-stroked-button color="primary">No. of incorrect answers: {{qr.wrong}}</button>
+  </mat-card-content>
+</mat-card>
+}
