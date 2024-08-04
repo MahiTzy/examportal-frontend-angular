@@ -8,38 +8,40 @@ export class QuestionService {
 
   constructor(private http:HttpClient) { }
 
+  baseUrl: any = 'https://examportal-sb.up.railway.app';
+
   // get questions by quiz id
   public getQuestionsOfQuiz(qid: any){
-    return this.http.get(`http://localhost:8080/question/quiz/all/${qid}`);
+    return this.http.get(`${this.baseUrl}/question/quiz/${qid}`);
   }
 
   // get questions by quiz id for exam
   public getQuestionsOfQuizForExam(qid:any){
-    return this.http.get(`http://localhost:8080/question/quiz/${qid}`);
+    return this.http.get(`${this.baseUrl}/question/quiz/${qid}/exam`);
   }
 
   // delete question
   deleteQuestion(quesId: any){
-    return this.http.delete(`http://localhost:8080/question/${quesId}`)
+    return this.http.delete(`${this.baseUrl}/question/${quesId}`);
   }
 
   // add question
   addQuestion(question: any){
-    return this.http.post('http://localhost:8080/question/', question);
+    return this.http.post(`${this.baseUrl}/question/`, question);
   }
 
   // update question
   updateQuestion(question: any){
-    return this.http.put('http://localhost:8080/question/', question);
+    return this.http.put(`${this.baseUrl}/question/`, question);
   }
 
   // get question by id
   getQuestion(quesId: any){
-    return this.http.get(`http://localhost:8080/question/${quesId}`);
+    return this.http.get(`${this.baseUrl}/question/${quesId}`);
   }
 
   // evaluate quiz
   submitQuiz(questions: any){
-    return this.http.post('http://localhost:8080/question/quiz/evaluate', questions);
+    return this.http.post(`${this.baseUrl}/question/quiz/evaluate`, questions);
   }
 }

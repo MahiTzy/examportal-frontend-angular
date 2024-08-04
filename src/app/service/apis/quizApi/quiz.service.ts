@@ -7,35 +7,37 @@ import { Injectable } from '@angular/core';
 export class QuizService {
   constructor(private http: HttpClient) {}
 
+  baseUrl: any = 'https://examportal-sb.up.railway.app';
+
   getQuizzes() {
-    return this.http.get('http://localhost:8080/quiz/');
+    return this.http.get(`${this.baseUrl}/quiz/`);
   }
 
   addQuiz(quiz: any) {
-    return this.http.post('http://localhost:8080/quiz/', quiz);
+    return this.http.post(`${this.baseUrl}/quiz/`, quiz);
   }
 
   deleteQuiz(qid: any) {
-    return this.http.delete('http://localhost:8080/quiz/' + qid);
+    return this.http.delete(`${this.baseUrl}/quiz/${qid}`);
   }
 
   getQuiz(qid: any) {
-    return this.http.get('http://localhost:8080/quiz/' + qid);
+    return this.http.get(`${this.baseUrl}/quiz/${qid}`);
   }
 
   updateQuiz(quiz: any) {
-    return this.http.put('http://localhost:8080/quiz/', quiz);
+    return this.http.put(`${this.baseUrl}/quiz/`, quiz);
   }
 
   getQuizOfcategory(cid: any) {
-    return this.http.get('http://localhost:8080/quiz/category/' + cid);
+    return this.http.get(`${this.baseUrl}/quiz/category/${cid}`);
   }
 
   getActiveQuizzes(){
-    return this.http.get('http://localhost:8080/quiz/active');
+    return this.http.get(`${this.baseUrl}/quiz/active`);
   }
 
   getActiveQuizzesOfCategory(cid: any){
-    return this.http.get('http://localhost:8080/quiz/category/active/'+cid);
+    return this.http.get(`${this.baseUrl}/quiz/category/active/${cid}`);
   }
 }

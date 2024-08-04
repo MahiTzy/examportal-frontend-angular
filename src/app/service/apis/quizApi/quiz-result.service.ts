@@ -8,15 +8,17 @@ export class QuizResultService {
 
   constructor(private _http:HttpClient) { }
 
+  baseUrl: any = 'https://examportal-sb.up.railway.app';
+
   public submitQuizResult(quizResult:any){
-    return this._http.post('http://localhost:8080/quiz-result/submit',quizResult);
+    return this._http.post(`${this.baseUrl}/quiz-result/submit`,quizResult);
   }
 
   public getQuizResultForUser(username:any){
-    return this._http.get('http://localhost:8080/quiz-result/'+username);
+    return this._http.get(`${this.baseUrl}/quiz-result/${username}`);
   }
 
   public getQuizResultForAdmin(qid:any){
-    return this._http.get('http://localhost:8080/quiz-result/quiz/'+qid);
+    return this._http.get(`${this.baseUrl}/quiz-result/quiz/${qid}`);
   }
 }

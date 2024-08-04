@@ -8,16 +8,18 @@ export class CategoryService{
 
   constructor(private http:HttpClient) { }
 
+  baseUrl: any = 'https://examportal-sb.up.railway.app';
+
   getCategories(){
-    return this.http.get('http://localhost:8080/category/');
+    return this.http.get(`${this.baseUrl}/category/`);
   }
 
   addCategory(category: any){
-    return this.http.post('http://localhost:8080/category/',category);
+    return this.http.post(`${this.baseUrl}/category/`,category);
   }
 
   deleteCategory(id: any){
-    return this.http.delete('http://localhost:8080/category/'+id);
+    return this.http.delete(`${this.baseUrl}/category/${id}`);
   }
 
   updateCategory(category:any){
@@ -25,6 +27,6 @@ export class CategoryService{
   }
 
   getCategory(id:any){
-    return this.http.get('http://localhost:8080/category/'+id);
+    return this.http.get(`${this.baseUrl}/category/${id}`);
   }
 }

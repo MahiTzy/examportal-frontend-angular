@@ -11,12 +11,14 @@ export class LoginService {
 
   constructor(private http: HttpClient) {}
 
+  baseUrl: any = 'https://examportal-sb.up.railway.app';
+
   getCurrentUser() {
-    return this.http.get('http://localhost:8080/current-user');
+    return this.http.get(`${this.baseUrl}/current-user`);
   }
 
   generateToken(username: string, password: string) {
-    return this.http.post('http://localhost:8080/generate-token', { username, password });
+    return this.http.post(`${this.baseUrl}/generate-token`, {username, password});
   }
 
   login(token: any) {
