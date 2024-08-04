@@ -8,6 +8,6 @@ export class ApiService {
   baseUrl: any = 'https://examportal-sb.up.railway.app';
   constructor(private http: HttpClient) {}
   createUser(user: any) {
-    return this.http.post(this.baseUrl + '/', user);
+    return this.http.post(`${this.baseUrl}/user/`, user);
   }
 }
