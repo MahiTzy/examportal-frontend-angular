@@ -1,25 +1,25 @@
-<mat-card>
+<mat-card class="blur-bg text-white">
   <div class="container">
     <mat-card-header>
-      <h1>Add Question in {{title}}</h1>
+      <h1>Add Question in <b>{{title}}</b></h1>
     </mat-card-header>
     <mat-card-content>
       <mat-form-field appearance="outline" class="w-100">
-        <mat-label>Title</mat-label>
-        <input matInput placeholder="Enter title of Question" name="title" [(ngModel)]="question.content" required>
+        <mat-label class="text-white">Title</mat-label>
+        <input class="text-white" matInput placeholder="Enter title of Question" name="title" [(ngModel)]="question.content" required>
       </mat-form-field>
       <div class="row">
         <div class="col-6">
           <mat-form-field appearance="outline" class="w-100">
-            <mat-label>Option #1</mat-label>
-            <input matInput placeholder="Enter option #1" name="option1" [(ngModel)]="question.option1"
+            <mat-label class="text-white">Option #1</mat-label>
+            <input class="text-white" matInput placeholder="Enter option #1" name="option1" [(ngModel)]="question.option1"
               required>
           </mat-form-field>
         </div>
         <div class="col-6">
           <mat-form-field appearance="outline" class="w-100">
-            <mat-label>Option #2</mat-label>
-            <input matInput placeholder="Enter option #2" name="option2" [(ngModel)]="question.option2"
+            <mat-label class="text-white">Option #2</mat-label>
+            <input class="text-white" matInput placeholder="Enter option #2" name="option2" [(ngModel)]="question.option2"
               required>
           </mat-form-field>
         </div>
@@ -27,15 +27,15 @@
       <div class="row">
         <div class="col-6">
           <mat-form-field appearance="outline" class="w-100">
-            <mat-label>Option #3</mat-label>
-            <input matInput placeholder="Enter option #3" name="option3" [(ngModel)]="question.option3"
+            <mat-label class="text-white">Option #3</mat-label>
+            <input class="text-white" matInput placeholder="Enter option #3" name="option3" [(ngModel)]="question.option3"
               required>
           </mat-form-field>
         </div>
         <div class="col-6">
           <mat-form-field appearance="outline" class="w-100">
-            <mat-label>Option #4</mat-label>
-            <input matInput placeholder="Enter option #4" name="option4" [(ngModel)]="question.option4"
+            <mat-label class="text-white">Option #4</mat-label>
+            <input class="text-white" matInput placeholder="Enter option #4" name="option4" [(ngModel)]="question.option4"
               required>
           </mat-form-field>
         </div>
@@ -44,8 +44,8 @@
       <div class="row">
         <div class="col-md-12">
           <mat-form-field appearance="outline" class="w-100">
-            <mat-label>Answer</mat-label>
-            <mat-select [(ngModel)]="question.answer">
+            <mat-label class="text-white">Answer</mat-label>
+            <mat-select class="text-white" [(ngModel)]="question.answer">
               <mat-option [value]="question.option1">Option #1</mat-option>
               <mat-option [value]="question.option2">Option #2</mat-option>
               <mat-option [value]="question.option3">Option #3</mat-option>

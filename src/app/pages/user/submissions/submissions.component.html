@@ -1,7 +1,6 @@
-<!-- {{quizResult | json}} -->
-
+<div *ngIf="quizResultsWithDetails && quizResultsWithDetails.length; else noDetails;">
 @for (qr of quizResultsWithDetails; track qr) {
-<mat-card class="mb-1">
+<mat-card class="mb-1 blur-bg text-white">
 
   <mat-card-header>
     <div mat-card-avatar class="example-header-image"></div>
@@ -10,12 +9,20 @@
   </mat-card-header>
 
   <mat-card-content>
-    <button class="me-2" mat-stroked-button color="primary">M.M. {{qr.quizDetails.maxMarks}}</button>
-    <button class="me-2" mat-stroked-button color="primary">Marks obtained: {{(qr.score*100)/qr.quizDetails.maxMarks}}%</button>
-    <button class="me-2" mat-stroked-button color="primary">Total questions: {{qr.quizDetails.numberOfQuestions}}</button>
-    <button class="me-2" mat-stroked-button color="primary">Questions attempted: {{qr.attempted}}</button>
-    <button class="me-2" mat-stroked-button color="primary">No. of correct answers: {{qr.correct}}</button>
-    <button class="me-2" mat-stroked-button color="primary">No. of incorrect answers: {{qr.wrong}}</button>
+    <button class="me-2 text-info" mat-stroked-button>M.M. {{qr.quizDetails.maxMarks}}</button>
+    <button class="me-2 text-info" mat-stroked-button>Marks obtained: {{(qr.score*100)/qr.quizDetails.maxMarks}}%</button>
+    <button class="me-2 text-info" mat-stroked-button>Total questions: {{qr.quizDetails.numberOfQuestions}}</button>
+    <button class="me-2 text-info" mat-stroked-button>Questions attempted: {{qr.attempted}}</button>
+    <button class="me-2 text-info" mat-stroked-button>No. of correct answers: {{qr.correct}}</button>
+    <button class="me-2 text-info" mat-stroked-button>No. of incorrect answers: {{qr.wrong}}</button>
   </mat-card-content>
 </mat-card>
 }
+</div>
+
+<ng-template #noDetails>
+  <mat-card appearance="outlined" class="mb-1 blur-bg text-white">
+    <mat-card-content>
+      <h1>No quiz results found.</h1>
+    </mat-card-content>
+  </mat-card>

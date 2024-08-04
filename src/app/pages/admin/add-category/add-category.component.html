@@ -1,21 +1,19 @@
-<mat-card>
+<mat-card class="blur-bg text-white">
   <div class="container">
     <mat-card-header>
       <h1>Add Category</h1>
     </mat-card-header>
     <mat-card-content>
-      <form #form="ngForm">
         <mat-form-field appearance="outline" class="w-100">
-          <mat-label>Title</mat-label>
-          <input matInput placeholder="Enter title of Category" name="title" [(ngModel)]="category.title" required>
+          <mat-label class="text-white">Title</mat-label>
+          <input class="text-white" matInput placeholder="Enter title of Category" name="title" [(ngModel)]="category.title" required>
         </mat-form-field>
         <mat-form-field appearance="outline" class="w-100">
-          <mat-label>Description</mat-label>
-          <textarea matInput placeholder="Category Description" name="discription" [(ngModel)]="category.description"
+          <mat-label class="text-white">Description</mat-label>
+          <textarea class="text-white" matInput placeholder="Category Description" name="discription" [(ngModel)]="category.description"
             required="true">
             </textarea>
         </mat-form-field>
-      </form>
     </mat-card-content>
     <mat-card-actions class="text-center">
       <div class="text-center w-100">

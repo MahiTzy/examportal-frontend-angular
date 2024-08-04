@@ -1,0 +1,10 @@
+.content-container {
+  height: calc(100vh - 64px); /* Adjust as per your needs */
+  overflow: hidden;
+}
+
+.content {
+  height: 100%;
+  overflow-y: auto;
+  padding-inline: 15px; /* To prevent scrollbar overlap */
+}

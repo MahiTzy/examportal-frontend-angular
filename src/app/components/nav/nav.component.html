@@ -1,4 +1,4 @@
-<mat-toolbar class="px-5" color="primary">
+<mat-toolbar class="px-5 side" color="primary">
     <button mat-icon-button aria-label="Example icon-button with menu icon">
         <mat-icon>menu_book</mat-icon>
     </button>
@@ -14,7 +14,7 @@
         Register
     </a>
     <a *ngIf="isLoggedIn && user">Welcome!&nbsp;&nbsp;{{user.username | uppercase}}</a>
-    <a *ngIf="isLoggedIn" class="ms-2" (click)="logout()" mat-raised-button color="warn">
-        Logout
+    <a *ngIf="isLoggedIn" class="ms-2" (click)="logout()" mat-mini-fab color="warn">
+        <mat-icon>logout</mat-icon>
     </a>
 </mat-toolbar>

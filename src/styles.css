@@ -1,15 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
 html,
 body {
-  height: 100%;
+  height: calc(100vh-80px);
 }
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
   /* background-color: rgb(185, 192, 204)!important; */
-  background-image: url('https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjgyOGxieTB6MHl0dDNzZXJ3b2d6bmlveHcwNTRkYjdhdnkxdW1lMCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/BHNfhgU63qrks/giphy.gif');
+  background-image: url("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjgyOGxieTB6MHl0dDNzZXJ3b2d6bmlveHcwNTRkYjdhdnkxdW1lMCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/BHNfhgU63qrks/giphy.gif");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+.blur-bg {
+  background: rgba(185, 192, 204, 0.2)!important;
+  border-radius: 16px!important;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1)!important;
+  backdrop-filter: blur(15px)!important;
+  -webkit-backdrop-filter: blur(5px)!important;
+  border: 1px solid rgba(255, 255, 255, 0.3)!important;
 }

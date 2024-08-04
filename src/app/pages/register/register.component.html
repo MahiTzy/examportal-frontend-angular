@@ -1,7 +1,7 @@
 <div class="bootstrap-wrapper">
   <div class="container min-vh-100">
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-6 my-5 left">
 
       </div>
       <div class="col-md-6 my-5">
@@ -17,34 +17,34 @@
           <mat-card-content class="mt-2">
             <form (submit)="formSubmit()" class="example-form">
               <mat-form-field class="w-100" appearance="outline">
-                <mat-label>Username</mat-label>
-                <input name="username" [(ngModel)]="user.username" matInput placeholder="Enter your username">
+                <mat-label class="text-white">Username</mat-label>
+                <input class="text-white" name="username" [(ngModel)]="user.username" matInput placeholder="Enter your username">
                 <mat-icon matSuffix>person</mat-icon>
               </mat-form-field>
               <mat-form-field class="w-100" appearance="outline">
-                <mat-label>Password</mat-label>
-                <input name="password" [(ngModel)]="user.password" type="password" matInput
+                <mat-label class="text-white">Password</mat-label>
+                <input class="text-white" name="password" [(ngModel)]="user.password" type="password" matInput
                   placeholder="Enter your password">
                 <mat-icon matSuffix>key</mat-icon>
               </mat-form-field>
               <mat-form-field class="w-100" appearance="outline">
-                <mat-label>First Name</mat-label>
-                <input name="firstName" [(ngModel)]="user.firstName" matInput placeholder="Enter first name">
+                <mat-label class="text-white">First Name</mat-label>
+                <input class="text-white" name="firstName" [(ngModel)]="user.firstName" matInput placeholder="Enter first name">
                 <mat-icon matSuffix>badge</mat-icon>
               </mat-form-field>
               <mat-form-field class="w-100" appearance="outline">
-                <mat-label>Last Name</mat-label>
-                <input name="lastName" [(ngModel)]="user.lastName" matInput placeholder="Enter last name">
+                <mat-label class="text-white">Last Name</mat-label>
+                <input class="text-white" name="lastName" [(ngModel)]="user.lastName" matInput placeholder="Enter last name">
                 <mat-icon matSuffix>badge</mat-icon>
               </mat-form-field>
               <mat-form-field class="w-100" appearance="outline">
-                <mat-label>Email</mat-label>
-                <input name="email" [(ngModel)]="user.email" type="email" matInput placeholder="Enter your email">
+                <mat-label class="text-white">Email</mat-label>
+                <input class="text-white" name="email" [(ngModel)]="user.email" type="email" matInput placeholder="Enter your email">
                 <mat-icon matSuffix>contact_mail</mat-icon>
               </mat-form-field>
               <mat-form-field class="w-100" appearance="outline">
-                <mat-label>Phone</mat-label>
-                <input style="text-decoration: none;" name="phone" [(ngModel)]="user.phone" type="number" matInput placeholder="Enter phone number">
+                <mat-label class="text-white">Phone</mat-label>
+                <input class="text-white" name="phone" [(ngModel)]="user.phone" type="number" matInput placeholder="Enter phone number">
                 <mat-icon matSuffix>contact_phone</mat-icon>
               </mat-form-field>
               <div class="container text-center">

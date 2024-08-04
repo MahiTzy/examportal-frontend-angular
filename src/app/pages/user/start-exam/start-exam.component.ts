@@ -32,7 +32,7 @@ export class StartExamComponent implements OnInit {
   evaluations: any = [];
   isSubmitted: any = false;
   timer: any = 0;
-  isDisabled: any = false;
+  isDisabled: any = true;
 
   ngOnInit() {
     this._route.params.subscribe((params) => {

@@ -1,5 +1,5 @@
 <div *ngIf="categories && categories.length; else noCategories">
-  <mat-card appearance="outlined" *ngFor="let c of categories" class="mb-1">
+  <mat-card appearance="outlined" *ngFor="let c of categories" class="mb-1 blur-bg text-white">
     <mat-card-header>
       <div mat-card-avatar class="example-header-image"></div>
       <mat-card-title>{{c.title}}</mat-card-title>
@@ -17,7 +17,7 @@
 </div>
 
 <ng-template #noCategories>
-  <mat-card appearance="outlined" class="mb-1">
+  <mat-card appearance="outlined" class="mb-1 blur-bg text-white">
     <mat-card-content>
       <h1>No categories found.</h1>
     </mat-card-content>

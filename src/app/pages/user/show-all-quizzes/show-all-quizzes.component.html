@@ -1,5 +1,5 @@
 <div *ngIf="quizzes && quizzes.length; else noQuizzess">
-  <mat-card appearance="outlined" *ngFor="let c of quizzes" class="mb-1">
+  <mat-card appearance="outlined" *ngFor="let c of quizzes" class="mb-1 blur-bg text-white">
     <mat-card-header>
       <div mat-card-avatar class="example-header-image"></div>
       <mat-card-title>{{c.title}}</mat-card-title>
@@ -19,7 +19,7 @@
 </div>
 
 <ng-template #noQuizzess>
-  <mat-card appearance="outlined" class="mb-1">
+  <mat-card appearance="outlined" class="mb-1 blur-bg text-white">
     <mat-card-content>
       <h1>No Quizzess found.</h1>
     </mat-card-content>
