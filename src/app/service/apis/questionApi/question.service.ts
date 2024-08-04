@@ -12,7 +12,7 @@ export class QuestionService {
 
   // get questions by quiz id
   public getQuestionsOfQuiz(qid: any){
-    return this.http.get(`${this.baseUrl}/question/quiz/${qid}`);
+    return this.http.get(`${this.baseUrl}/question/quiz/all/${qid}`);
   }
 
   // get questions by quiz id for exam
