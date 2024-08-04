@@ -23,7 +23,7 @@ export class CategoryService{
   }
 
   updateCategory(category:any){
-    return this.http.put('http://localhost:8080/category/',category);
+    return this.http.put(`${this.baseUrl}/category/`,category);
   }
 
   getCategory(id:any){
