@@ -17,7 +17,7 @@ export class QuestionService {
 
   // get questions by quiz id for exam
   public getQuestionsOfQuizForExam(qid:any){
-    return this.http.get(`${this.baseUrl}/question/quiz/${qid}/exam`);
+    return this.http.get(`${this.baseUrl}/question/quiz/${qid}`);
   }
 
   // delete question
